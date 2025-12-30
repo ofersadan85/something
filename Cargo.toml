@@ -1,0 +1,29 @@
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+edition = "2024"
+authors = ["Ofer Sadan <ofersadan85@gmail.com>"]
+readme = "./README.md"
+description = "{{project-description}}"
+# repository = "https://github.com/{{git_user}}/{{git_repo}}"
+license = "GPL-3.0-only"
+# license-file = "./LICENSE"
+keywords = []
+categories = []
+
+
+[dependencies]
+color-eyre = "0.6.5"
+thiserror = "2.0.17"
+tracing = { version = "0.1.44", features = ["async-await"] }
+tracing-subscriber = { version = "0.3.22", features = ["chrono", "env-filter"] }
+
+[lints.rust]
+# unsafe_code = "forbid"
+# dead_code = "allow"
+
+[lints.clippy]
+# cargo = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+# unwrap_used = "deny"
